@@ -1,0 +1,6 @@
+res://level_1.tscn
+res://Assets/Models/coin_new.res
+res://steve.tscn
+res://addons/virtual_joystick/virtual_joystick_scene.tscn
+res://steve.gd
+res://addons/virtual_joystick/virtual_joystick.gd

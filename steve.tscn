@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4m3akfrhro2s"]
+
+[ext_resource type="Script" path="res://steve.gd" id="1_3tiih"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_joctc"]
+albedo_color = Color(0, 0.756863, 0.87451, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w8jlm"]
+material = SubResource("StandardMaterial3D_joctc")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w31if"]
+
+[node name="Steve" type="CharacterBody3D"]
+script = ExtResource("1_3tiih")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_w8jlm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_w31if")
+
+[node name="Camera_Target" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999969, 0.00787106, 0, -0.00787106, 0.999969, 0, 0.39777, 1.26014)
+
+[node name="Camera3D" type="Camera3D" parent="Camera_Target"]
+transform = Transform3D(1, 0, 0, 0, 0.991372, -0.13108, 0, 0.13108, 0.991372, 0, -0.14966, -1.83692)
+current = true
+fov = 135.0
